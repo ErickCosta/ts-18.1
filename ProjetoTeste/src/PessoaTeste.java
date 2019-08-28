@@ -18,6 +18,19 @@ class PessoaTeste {
 	}
 	
 	@Test
+	void contentNomeTeste() {
+		Pessoa p = new Pessoa();
+		
+		boolean nomeCorretoContent = true;
+		
+		String nomeCorreto = "JOÃO DA SILVA";
+		
+		boolean nomeArmazenadoContent = p.setNome(nomeCorreto);
+		
+		assertEquals(nomeCorretoContent, nomeArmazenadoContent);	
+	}
+	
+	@Test
 	void getSetCpfTeste() {
 		Pessoa p = new Pessoa();
 		
@@ -36,7 +49,7 @@ class PessoaTeste {
 		
 		boolean cpfCorretoSize = true;
 		
-		String cpfCorreto = "12312312313";
+		String cpfCorreto = "12312312311";
 		
 		boolean cpfArmazenadoSize = p.setCpf(cpfCorreto);
 		
@@ -49,7 +62,7 @@ class PessoaTeste {
 		
 		boolean cpfCorretoContent = true;
 		
-		String cpfCorreto = "12312312311";
+		String cpfCorreto = "12312312313";
 		
 		boolean cpfArmazenadoContent = p.setCpf(cpfCorreto);
 		
